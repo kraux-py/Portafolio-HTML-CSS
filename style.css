@@ -193,7 +193,7 @@ span {
     height: 100%;
     border-left: 3px solid var(--bg-color);
     right: -8px;
-    animation: cursor 1s infinite, typing 20s steps(20) infinite;
+    animation: cursor 1s infinite, typing 20s steps(14) infinite;
 }
 @keyframes cursor {
     to {
@@ -307,10 +307,11 @@ span {
     color: white;
     font-size: 16px;
     font-weight: 300;
+
     line-height: 22px;
 }
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 15px;
 }
 ::-webkit-scrollbar-thumb {
     background-color: var(--main-color);
@@ -318,4 +319,230 @@ span {
 }
 ::-webkit-scrollbar-track {
     background-color: var(--bg-color);
+    width: 50px;
+}
+.services {
+    background-color: var(--second-bg-color);
+}
+
+.heading {
+   text-align: center;
+   font-size: 8rem;
+}
+.services h2{
+    margin-bottom: 8rem;
+}
+.service-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.service-container .services-box {
+    flex: 1 1 40rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    height: 550px; 
+    border-radius: 2rem;
+    border: 3px solid var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.service-container .services-box:hover{
+    transform: scale(1.02);
+    background-color: white;
+    color: black;
+}
+.services-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+.services-box h3{
+    font-size: 2.6rem;
+}
+.services-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem ;
+    font-weight: 500;
+}
+.services-box .btn:hover{
+    color: var(--main-color);
+    background-color: black;
+}
+.projects{
+    background-color: var(--bg-color) center no-repeat;
+    background-size: cover;
+}
+.projects-box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    margin: 5rem 0 ;
+    gap: 3rem;
+    row-gap: 5rem;
+}
+.project-card{
+    height: 600px;
+    max-width: 450px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+    border: 2px solid var(--main-color);
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem ;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--main-color);
+    transition: 0.4s ease;
+}
+.project-card:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
+    transform: scale(1.0); 
+}
+.project-card img{
+    max-width: 19vw;
+    object-fit: cover;
+}
+.project-card h3{
+    font-size: 3rem;
+}
+.project-card p {
+    font-size: 1.6rem;
+}
+.profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5em;
+    padding: 10em 5em;
+    border-radius: 10em;
+    background-color: rgba(207, 207, 207, 0.168);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.166);
+    color: white;
+}
+
+.profile-card img {
+    width: 200px; 
+    height: auto; 
+    border-radius: 50%;
+    border: 3px solid rgb(0, 255, 234);
+    box-shadow: 0 0 25px rgb(0, 255, 234);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.profile-card img:hover {
+    box-shadow: 0 0 25px rgb(0, 255, 234),
+                0 0 50px rgb(0, 255, 234),
+                0 0 100px rgb(0, 255, 234);
+}
+
+.profile-card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5em;
+}
+
+.profile-card .info h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.profile-card .info p {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.profile-card .social {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.profile-card .social i {
+    font-size: 2em;
+    color: rgb(0, 255, 234);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.profile-card .socials i:hover {
+    color: white;
+}
+
+
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: grey transparent;
+    backdrop-filter: blur(10px);
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer .social a{
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+.footer .social a:hover{
+    transform: scale(1.2) translateY(-10px);
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.footer ul li a:hover{
+    border-bottom: 3px solid white;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .Copyright{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
 }
